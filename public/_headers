@@ -1,19 +1,11 @@
-/assets/*
-  Content-Type: application/javascript
-  X-Content-Type-Options: nosniff
-
-/*.js
-  Content-Type: application/javascript
-  X-Content-Type-Options: nosniff
-
-/*.tsx
-  Content-Type: application/javascript
+/*
   X-Content-Type-Options: nosniff
 
 /*.css
   Content-Type: text/css
-  X-Content-Type-Options: nosniff
+
+/*.js
+  Content-Type: application/javascript
 
 /index.html
   Content-Type: text/html
-  X-Content-Type-Options: nosniff

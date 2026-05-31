@@ -1,5 +1,5 @@
 {
   "version": 1,
   "include": ["/*"],
-  "exclude": ["/assets/*", "/favicon.svg", "/icons.svg", "/_headers"]
+  "exclude": ["/assets/*", "/*.js", "/*.css", "/favicon.svg", "/icons.svg"]
 }

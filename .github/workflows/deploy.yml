@@ -28,8 +28,8 @@ jobs:
       - name: Build
         run: npm run build
 
-      - name: Copy _headers
-        run: cp public/_headers dist/_headers
+      - name: Copy _routes.json
+        run: cp public/_routes.json dist/_routes.json
 
       - name: Deploy to Cloudflare Pages
         uses: cloudflare/pages-action@v1

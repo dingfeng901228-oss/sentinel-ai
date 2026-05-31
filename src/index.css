@@ -1,7 +1,8 @@
 @import "tailwindcss";
 
 @theme {
-  --font-sora: "Sora", sans-serif;
+  --font-inter: "Inter", sans-serif;
+  --font-outfit: "Outfit", sans-serif;
 
   --color-background: hsl(0 0% 10%);
   --color-foreground: hsl(0 0% 96%);
@@ -47,8 +48,103 @@
   }
 }
 
-body {
-  font-family: var(--font-sora);
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+/* Video hover effects */
+.video-container video {
+  transition: transform 500ms cubic-bezier(0.33, 1, 0.68, 1);
+}
+
+.video-container:hover video {
+  transform: scale(1.08);
+}
+
+.video-overlay {
+  opacity: 0;
+  transition: opacity 400ms ease;
+}
+
+.video-container:hover .video-overlay {
+  opacity: 1;
+}
+
+/* Corner brackets */
+.corner-bracket {
+  opacity: 0;
+  transition: opacity 300ms ease;
+}
+
+.video-container:hover .corner-bracket {
+  opacity: 1;
+}
+
+/* Plus icon */
+.plus-icon {
+  opacity: 0;
+  transform: scale(0.7);
+  transition: opacity 300ms ease, transform 300ms ease;
+}
+
+.video-container:hover .plus-icon {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* Blog card hover */
+.blog-card:hover .video-container video {
+  transform: scale(1.08);
+}
+
+.blog-card:hover .video-overlay {
+  opacity: 1;
+}
+
+.blog-card:hover .corner-bracket {
+  opacity: 1;
+}
+
+.blog-card:hover .plus-icon {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* View all button hover */
+.view-all-btn:hover {
+  transform: scale(1.02);
+}
+
+/* Featured post */
+.featured-post .video-container {
+  min-height: 520px;
+}
+
+@media (max-width: 1024px) {
+  .featured-post {
+    grid-template-columns: 1fr !important;
+  }
+  
+  .featured-post .video-container {
+    min-height: 300px;
+  }
+  
+  .featured-content {
+    padding: 40px !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .blog-heading {
+    font-size: 48px !important;
+  }
+  
+  .featured-title {
+    font-size: 32px !important;
+  }
+  
+  .blog-grid {
+    grid-template-columns: 1fr !important;
+  }
+  
+  .header-bottom {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+  }
 }

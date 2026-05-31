@@ -1,12 +1,10 @@
-import { Navbar } from "@/components/Navbar"
-import { Hero } from "@/components/Hero"
+import { Blog } from "@/components/Blog"
 import "./index.css"
 
 function App() {
   return (
-    <div className="min-h-screen bg-background text-foreground font-sora antialiased">
-      <Navbar />
-      <Hero />
+    <div className="min-h-screen bg-white text-[#1a1a1a]">
+      <Blog />
     </div>
   )
 }
